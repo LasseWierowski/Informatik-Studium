@@ -9,7 +9,6 @@ public class Main {
         int j = SimpleIO.getInt("Geben Sie das Start Jahr ein: ");
         int t = SimpleIO.getInt("Geben Sie die Anzahl der Tage an: ");
 
-
         //Statische Variable für die Tage am ende zur Ausgabe
         int t_static = t;
 
@@ -24,7 +23,6 @@ public class Main {
             valideWerte = false;
             System.out.println("Keine Valide Eingabe");
         }
-
         //Tages Differenz der Monate
         int tage[] = {1, -2, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0};
 
@@ -47,14 +45,11 @@ public class Main {
                 //Update der Tages Variable (Laufvariable)
                 d = 1;
                 t = t - bisNM - 1;
-
             }
-
-
         }
         //Ausgabe des Datums (Falls Valide Eingaben)
         if (valideWerte) {
-            System.out.println("Das Datum " + d + "." + m + "." + j + " befindet sich " + t_static + " Tage " + " nach dem Start Datum");
+            SimpleIO.output("Das Datum " + d + "." + m + "." + j + " befindet sich " + t_static + " Tage " + " nach dem Start Datum");
         }
 
     }
